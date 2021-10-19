@@ -1,0 +1,875 @@
+@charset "UTF-8";
+/*--------------------------------------------------- General-----------------------------------------------------------------------------*/
+/*--Reinicio los marguenes--*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+/*--Animacion--*/
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*--Main Contacto--*/
+.Main3 form {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #333127; }
+  .Main3 form label {
+    color: blanchedalmond; }
+
+/*--Main Preguntas--*/
+.Main4 {
+  background-color: #333127; }
+  .Main4 ul {
+    align-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .Main4 ul li {
+      color: #a0bef7;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .Main4 ul li h5 {
+        font-weight: 10px;
+        color: cornflowerblue; }
+      .Main4 ul li small {
+        font-size: calc(7px + 1vw); }
+
+/*--------------------------------------------------- Queries-----------------------------------------------------------------------------*/
+/*--Tablets horizontal- Si la pantalla es al menos de 500px se aplica este estilo--*/
+@media only screen and (max-width: 624px) {
+  /*--Header--*/
+  .Header {
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Header__encabezado__logo {
+      text-align: center; }
+      .Header__encabezado__logo img {
+        height: 125px;
+        width: 150px; }
+    .Header__encabezado__principal__menu {
+      text-align: end;
+      height: 100%; }
+      .Header__encabezado__principal__menu audio {
+        height: 60px;
+        width: 250px;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+      .Header__encabezado__principal__menu nav {
+        padding-top: 20px; }
+        .Header__encabezado__principal__menu nav ul {
+          margin: 0;
+          padding: 0;
+          align-items: center;
+          text-align: center;
+          list-style-type: none;
+          justify-content: space-evenly;
+          width: 100%;
+          line-height: 50px;
+          display: flex; }
+          .Header__encabezado__principal__menu nav ul li {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            border: 20px black;
+            text-decoration: none; }
+            .Header__encabezado__principal__menu nav ul li a {
+              text-align: center;
+              font-weight: bold;
+              text-decoration: none;
+              /*para que no se vea el subrayado del hipervinculo*/
+              font-style: oblique;
+              color: white;
+              animation-duration: 2s;
+              animation-name: aparecer; }
+  /*--Main Index--*/
+  .Main1 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 475px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main1__Carrusel {
+      height: 175px;
+      width: 60%; }
+      .Main1__Carrusel__div__div img {
+        height: 150px;
+        border-radius: 30px;
+        padding-top: 20px; }
+      .Main1__Carrusel__BotonIzq {
+        left: -110px; }
+      .Main1__Carrusel__BotonDer {
+        right: -110px; }
+    .Main1__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main1__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 5px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main1__Menu {
+      display: flex;
+      flex-direction: rows;
+      justify-content: space-evenly;
+      height: 200px;
+      width: 100%;
+      align-items: center; }
+      .Main1__Menu__Articulo img {
+        height: 150px;
+        width: 150px;
+        border-radius: 80px; }
+  .Main1__Menu__Articulo:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Mujer/Hombre--*/
+  .Main2 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 1150px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main2__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 5px; }
+    .Main2__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main2__zapatos__seccion {
+      padding-top: 25px; }
+      .Main2__zapatos__seccion__imagen {
+        display: grid;
+        grid-template-rows: 135px 40px;
+        justify-items: center; }
+        .Main2__zapatos__seccion__imagen img {
+          height: 150px;
+          width: 150px;
+          border-radius: 80px; }
+        .Main2__zapatos__seccion__imagen button {
+          height: 25px;
+          width: 75px;
+          margin: 0px;
+          padding: 0px; }
+      .Main2__zapatos__seccion__descripcion {
+        border-style: groove;
+        border-radius: 30px;
+        width: 40%;
+        margin-bottom: 30px;
+        margin-left: 50px;
+        margin-right: 50px; }
+        .Main2__zapatos__seccion__descripcion p {
+          color: white;
+          font-size: calc(10px + 1vw);
+          text-align: center;
+          font-weight: bold; }
+  button:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Preguntas--*/
+  .Main4 {
+    height: 1100px; }
+    .Main4__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main4__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+  /*--Footer--*/
+  .Footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Footer__Info {
+      color: white;
+      font-size: calc(5px + 1vw);
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none; }
+      .Footer__Info h3 {
+        color: white;
+        text-decoration: underline;
+        font-size: calc(5px + 1vw); }
+    .Footer__Menu ul {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      /*eje y*/
+      text-align: center;
+      list-style-type: none;
+      /*para que no tenga el punto*/
+      line-height: 25px;
+      /*para centrar el menu ul en el bloque nav*/ }
+      .Footer__Menu ul li {
+        font-size: calc(5px + 1vw);
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none; }
+        .Footer__Menu ul li a {
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          /*para que no se vea el subrayado del hipervinculo*/
+          font-style: oblique;
+          color: white; }
+    .Footer__Redes img {
+      height: calc(15px + 2vw);
+      width: calc(15px + 2vw);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px; }
+    .Footer__Redes h3 {
+      color: white;
+      text-decoration: underline;
+      font-size: calc(5px + 1vw); } }
+
+/*--Tablets horizontal- Si la pantalla es al menos de 624px se aplica este estilo--*/
+@media only screen and (min-width: 624px) {
+  /*--Header--*/
+  .Header {
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Header__encabezado__logo {
+      text-align: center; }
+      .Header__encabezado__logo img {
+        height: 125px;
+        width: 150px; }
+    .Header__encabezado__principal__menu {
+      text-align: end;
+      height: 100%; }
+      .Header__encabezado__principal__menu audio {
+        height: 60px;
+        width: 250px;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+      .Header__encabezado__principal__menu nav {
+        padding-top: 20px; }
+        .Header__encabezado__principal__menu nav ul {
+          margin: 0;
+          padding: 0;
+          align-items: center;
+          text-align: center;
+          list-style-type: none;
+          justify-content: space-evenly;
+          width: 100%;
+          line-height: 50px;
+          display: flex; }
+          .Header__encabezado__principal__menu nav ul li {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            border: 20px black;
+            text-decoration: none; }
+            .Header__encabezado__principal__menu nav ul li a {
+              text-align: center;
+              font-weight: bold;
+              text-decoration: none;
+              /*para que no se vea el subrayado del hipervinculo*/
+              font-style: oblique;
+              color: white;
+              animation-duration: 2s;
+              animation-name: aparecer; }
+  /*--Main Index--*/
+  .Main1 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main1__Carrusel {
+      height: 175px;
+      width: 60%; }
+      .Main1__Carrusel__div__div img {
+        height: 150px;
+        border-radius: 30px;
+        padding-top: 20px; }
+      .Main1__Carrusel__BotonIzq {
+        left: -110px; }
+      .Main1__Carrusel__BotonDer {
+        right: -110px; }
+    .Main1__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main1__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 5px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main1__Menu {
+      display: flex;
+      flex-direction: rows;
+      justify-content: space-evenly;
+      height: 200px;
+      width: 100%;
+      align-items: center; }
+      .Main1__Menu__Articulo img {
+        height: 150px;
+        width: 150px;
+        border-radius: 80px; }
+  .Main1__Menu__Articulo:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Mujer/Hombre--*/
+  .Main2 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main2__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main2__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main2__zapatos__seccion {
+      padding-top: 50px; }
+      .Main2__zapatos__seccion__imagen {
+        display: grid;
+        grid-template-rows: 140px 20px;
+        justify-items: center; }
+        .Main2__zapatos__seccion__imagen img {
+          height: 150px;
+          width: 150px;
+          border-radius: 80px; }
+        .Main2__zapatos__seccion__imagen button {
+          height: 25px;
+          width: 75px;
+          margin: 0px;
+          padding: 0px; }
+      .Main2__zapatos__seccion__descripcion {
+        border-style: groove;
+        border-radius: 30px;
+        width: 20%;
+        /*margin-left: -10%;*/ }
+        .Main2__zapatos__seccion__descripcion p {
+          color: white;
+          font-size: calc(5px + 1vw);
+          text-align: center;
+          font-weight: bold; }
+  button:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Preguntas--*/
+  .Main4 {
+    height: 1000px; }
+    .Main4__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main4__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+  /*--Footer--*/
+  .Footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Footer__Info {
+      color: white;
+      font-size: calc(5px + 1vw);
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none; }
+      .Footer__Info h3 {
+        color: white;
+        text-decoration: underline;
+        font-size: calc(5px + 1vw); }
+    .Footer__Menu ul {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      /*eje y*/
+      text-align: center;
+      list-style-type: none;
+      /*para que no tenga el punto*/
+      line-height: 25px;
+      /*para centrar el menu ul en el bloque nav*/ }
+      .Footer__Menu ul li {
+        font-size: calc(5px + 1vw);
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none; }
+        .Footer__Menu ul li a {
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          /*para que no se vea el subrayado del hipervinculo*/
+          font-style: oblique;
+          color: white; }
+    .Footer__Redes img {
+      height: calc(15px + 2vw);
+      width: calc(15px + 2vw);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px; }
+    .Footer__Redes h3 {
+      color: white;
+      text-decoration: underline;
+      font-size: calc(5px + 1vw); } }
+
+/*--Notebook- Si la pantalla es al menos de 720px se aplica este estilo--*/
+@media only screen and (min-width: 720px) {
+  /*--Header--*/
+  .Header {
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Header__encabezado__logo {
+      text-align: center; }
+      .Header__encabezado__logo img {
+        height: 125px;
+        width: 150px; }
+    .Header__encabezado__principal__menu {
+      text-align: end;
+      height: 100%; }
+      .Header__encabezado__principal__menu audio {
+        height: 60px;
+        width: 250px;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+      .Header__encabezado__principal__menu nav {
+        padding-top: 20px; }
+        .Header__encabezado__principal__menu nav ul {
+          margin: 0;
+          padding: 0;
+          align-items: center;
+          text-align: center;
+          list-style-type: none;
+          justify-content: space-evenly;
+          width: 100%;
+          line-height: 50px;
+          display: flex; }
+          .Header__encabezado__principal__menu nav ul li {
+            font-size: 17px;
+            text-align: center;
+            font-weight: bold;
+            border: 20px black;
+            text-decoration: none; }
+            .Header__encabezado__principal__menu nav ul li a {
+              text-align: center;
+              font-weight: bold;
+              text-decoration: none;
+              /*para que no se vea el subrayado del hipervinculo*/
+              font-style: oblique;
+              color: white;
+              animation-duration: 2s;
+              animation-name: aparecer; }
+  /*--Main Index--*/
+  .Main1 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main1__Carrusel {
+      height: 225px;
+      width: 60%; }
+      .Main1__Carrusel__div__div img {
+        height: 200px;
+        border-radius: 30px;
+        padding-top: 20px; }
+      .Main1__Carrusel__BotonIzq {
+        left: -110px; }
+      .Main1__Carrusel__BotonDer {
+        right: -110px; }
+    .Main1__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main1__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 5px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main1__Menu {
+      display: flex;
+      flex-direction: rows;
+      justify-content: space-evenly;
+      height: 250px;
+      width: 100%;
+      align-items: center; }
+      .Main1__Menu__Articulo img {
+        height: 200px;
+        width: 200px;
+        border-radius: 80px; }
+  .Main1__Menu__Articulo:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Mujer/Hombre--*/
+  .Main2 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main2__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main2__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main2__zapatos__seccion {
+      padding-top: 50px; }
+      .Main2__zapatos__seccion__imagen {
+        display: grid;
+        grid-template-rows: 140px 20px;
+        justify-items: center; }
+        .Main2__zapatos__seccion__imagen img {
+          height: 150px;
+          width: 150px;
+          border-radius: 80px; }
+        .Main2__zapatos__seccion__imagen button {
+          height: 25px;
+          width: 75px;
+          margin: 0px;
+          padding: 0px; }
+      .Main2__zapatos__seccion__descripcion {
+        border-style: groove;
+        border-radius: 30px;
+        width: 20%;
+        /*margin-left: -10%;*/ }
+        .Main2__zapatos__seccion__descripcion p {
+          color: white;
+          font-size: calc(5px + 1vw);
+          text-align: center;
+          font-weight: bold; }
+  button:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Preguntas--*/
+  .Main4 {
+    height: 900px; }
+    .Main4__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main4__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+  /*--Footer--*/
+  .Footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Footer__Info {
+      color: white;
+      font-size: calc(5px + 1vw);
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none; }
+      .Footer__Info h3 {
+        color: white;
+        text-decoration: underline;
+        font-size: calc(5px + 1vw); }
+    .Footer__Menu ul {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      /*eje y*/
+      text-align: center;
+      list-style-type: none;
+      /*para que no tenga el punto*/
+      line-height: 25px;
+      /*para centrar el menu ul en el bloque nav*/ }
+      .Footer__Menu ul li {
+        font-size: calc(5px + 1vw);
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none; }
+        .Footer__Menu ul li a {
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          /*para que no se vea el subrayado del hipervinculo*/
+          font-style: oblique;
+          color: white; }
+    .Footer__Redes img {
+      height: calc(15px + 2vw);
+      width: calc(15px + 2vw);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px; }
+    .Footer__Redes h3 {
+      color: white;
+      text-decoration: underline;
+      font-size: calc(5px + 1vw); } }
+
+/*--Televisor- Si la pantalla es al menos de 960px se aplica este estilo--*/
+@media only screen and (min-width: 960px) {
+  /*--Header--*/
+  .Header {
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Header__encabezado__logo {
+      text-align: center; }
+      .Header__encabezado__logo img {
+        height: 150px;
+        width: 200px; }
+    .Header__encabezado__principal__menu {
+      text-align: end;
+      height: 100%; }
+      .Header__encabezado__principal__menu audio {
+        height: 60px;
+        width: 250px;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+      .Header__encabezado__principal__menu nav {
+        padding-top: 20px; }
+        .Header__encabezado__principal__menu nav ul {
+          margin: 0;
+          padding: 0;
+          align-items: center;
+          text-align: center;
+          list-style-type: none;
+          justify-content: space-evenly;
+          width: 100%;
+          line-height: 50px;
+          display: flex; }
+          .Header__encabezado__principal__menu nav ul li {
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            border: 20px black;
+            text-decoration: none; }
+            .Header__encabezado__principal__menu nav ul li a {
+              text-align: center;
+              font-weight: bold;
+              text-decoration: none;
+              /*para que no se vea el subrayado del hipervinculo*/
+              font-style: oblique;
+              color: white;
+              animation-duration: 2s;
+              animation-name: aparecer; }
+  /*--Main Index--*/
+  .Main1 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main1__Carrusel {
+      height: 300px;
+      width: 60%; }
+      .Main1__Carrusel__div__div img {
+        height: 275px;
+        border-radius: 30px;
+        padding-top: 20px; }
+      .Main1__Carrusel__BotonIzq {
+        left: -110px; }
+      .Main1__Carrusel__BotonDer {
+        right: -110px; }
+    .Main1__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main1__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 5px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main1__Menu {
+      display: flex;
+      flex-direction: rows;
+      justify-content: space-evenly;
+      height: 300px;
+      width: 100%;
+      align-items: center; }
+      .Main1__Menu__Articulo img {
+        height: 200px;
+        width: 200px;
+        border-radius: 80px; }
+  .Main1__Menu__Articulo:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Mujer/Hombre--*/
+  .Main2 {
+    background-color: #333127;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 100%;
+    align-items: center;
+    /*eje y*/ }
+    .Main2__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main2__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+    .Main2__zapatos__seccion {
+      padding-top: 25px; }
+      .Main2__zapatos__seccion__imagen {
+        display: grid;
+        grid-template-rows: 175px 20px;
+        justify-items: center; }
+        .Main2__zapatos__seccion__imagen img {
+          height: 200px;
+          width: 200px;
+          border-radius: 80px; }
+        .Main2__zapatos__seccion__imagen button {
+          height: 25px;
+          width: 75px;
+          margin: 0px;
+          padding: 0px; }
+      .Main2__zapatos__seccion__descripcion {
+        border-style: groove;
+        border-radius: 30px;
+        width: 20%;
+        /*margin-left: -10%;*/ }
+        .Main2__zapatos__seccion__descripcion p {
+          color: white;
+          font-size: calc(5px + 1vw);
+          text-align: center;
+          font-weight: bold; }
+  button:hover {
+    transform: scale(1.1, 1.1); }
+  /*--Main Preguntas--*/
+  .Main4 {
+    height: 900px; }
+    .Main4__Frase__FilaVacia {
+      background-color: #ada992;
+      height: 10px; }
+    .Main4__Frase__Texto h1 {
+      line-height: 50px;
+      height: 50px;
+      width: 100%;
+      font-size: calc( 10px + 1vw);
+      /*amaño mínimo será de 1rem y se le irá agregando el 1% del valor del ancho del viewport actual.*/
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 5px; }
+  /*--Footer--*/
+  .Footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient(to top, #1a1915, black); }
+    .Footer__Info {
+      color: white;
+      font-size: calc(5px + 1vw);
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none; }
+      .Footer__Info h3 {
+        color: white;
+        text-decoration: underline;
+        font-size: calc(5px + 1vw); }
+    .Footer__Menu ul {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      /*eje y*/
+      text-align: center;
+      list-style-type: none;
+      /*para que no tenga el punto*/
+      line-height: 25px;
+      /*para centrar el menu ul en el bloque nav*/ }
+      .Footer__Menu ul li {
+        font-size: calc(5px + 1vw);
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none; }
+        .Footer__Menu ul li a {
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          /*para que no se vea el subrayado del hipervinculo*/
+          font-style: oblique;
+          color: white; }
+    .Footer__Redes img {
+      height: calc(15px + 2vw);
+      width: calc(15px + 2vw);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px; }
+    .Footer__Redes h3 {
+      color: white;
+      text-decoration: underline;
+      font-size: calc(5px + 1vw); } }

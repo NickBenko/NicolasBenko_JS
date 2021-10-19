@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ZapatosDeTango</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolas Benko">
+    <meta name="description"
+        content="Marca de zapatos con reconocimiento a nivel mundial, lider en el mercado con la mejor calidad y los precios mas bajos">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/sass_estilo.css">
+    <link rel="stylesheet" href="css/nicepage.css">
+    <link rel="stylesheet" href="css/Casa.css">
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script src="JS/funciones.js" defer></script>
+    <script src="JS/jquery-3.6.0-min.js" defer></script>
+    <script src='JS/bootstrap.min.js' defer></script>
+    <script src="JS/productos.js" defer></script>
+    <script src="JS/contacto.js" defer></script>
+</head>
+
+
+
+<!--Empieza el Header-->
+<body style="background-color: black;" onload="btnLogin()" >
+        <!--Empieza el Header-->
+<header class="Header container-fluid">
+    <div class="row justify-content-evenly">
+        <div class="col-12">
+            <div class="Header__encabezado__principal__menu">
+                <nav class="navbar navbar-expand-md" style="justify-content: flex-end">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary"><a href="index.html">Home</a></button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary"><a href="carrito.html">Carrito</a></button>
+                            </li>
+                            <li class="nav-item" id="btnLogin">
+                                
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary"><a href="contacto.html">Contacto</a></button>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Termina el Header-->
+
+    <!--Empieza el Main-->
+    <main class="Main3">
+        <form class="row g-3">
+            <div class="col-4">
+                <label class="form-label">Nombre</label>
+                <input id="inputNombre" oninput="validarInput()" type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col-4">
+                <label class="form-label">Apellido</label>
+                <input type="text" class="form-control" placeholder="Apellido">
+            </div>
+            <div class="col-4">
+                <label class="form-label">Ciudad</label>
+                <input type="text" class="form-control" placeholder="Ciudad">
+            </div>
+            <div class="col-12">
+                <div class="col-6">
+                    <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Consultas sobre precios, talles, modelos de zapatos..."></textarea>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="col-2">
+                    <label for="inputState" class="form-label">Motivo de Consulta</label>
+                    <select id="inputState" class="form-select ">
+                        <option selected>Elija una opcion</option>
+                        <option>Zapatos Mujer</option>
+                        <option>Zapatos Caballero</option>
+                        <option>General</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-3">
+                <label oninput="validarInput2()" class="form-label" id="inputMail">Email </label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Deseo recibir mail con las ultimas promociones
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary" id="btnEnviar">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <!--Termina el Main-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Usuario:</label>
+                            <input type="text" class="form-control" id="inputUsuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="inputPassword">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button onclick="registrarte()" type="button" class="btn btn-success">Registrarse</button>
+                    <a href="index.html" onclick="login()" role="button"  class="btn btn-primary">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Empieza Animacion-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!--Termina Animacion-->
+
+    <!--Empieza Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!--Termina Boostrap-->
+     <!--Empieza Boton Login-->
+    <script>
+        acumulador=``;
+    if (localStorage.getItem(`Login`) == null){
+        acumulador=
+        `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Login</button>`
+        document.getElementById("btnLogin").innerHTML = acumulador;
+    }
+    else{
+        acumulador=
+        `<button onclick="cerrarSesion()" type="button" class="btn btn-primary">Cerrar Sesion</button>`
+        document.getElementById("btnLogin").innerHTML = acumulador;
+    }
+    </script>
+     <!--Termina Boton Login-->
+</body>
+
+</html>

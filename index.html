@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/sass_estilo.css">
+    <link rel="stylesheet" href="css/nicepage.css">
+    <link rel="stylesheet" href="css/Casa.css">
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script src='JS/bootstrap.min.js' defer></script>
+    <script src="JS/productPage.js" defer></script>
+    <script src="JS/funciones.js" defer></script>
+    <script src="JS/jquery-3.6.0.min.js" defer></script>
+    <script src="JS/productos.js" defer></script>
+    <script src="JS/usuarios.js" defer></script>
+    <script src="JS/index.js" defer></script>
+
+</head>
+
+
+
+
+<body style="background-color: black;" onload="btnLogin()" >
+    <!--Empieza el Header-->
+<header class="Header container-fluid">
+    <div class="row justify-content-evenly">
+        <div class="col-12">
+            <div class="Header__encabezado__principal__menu">
+                <nav class="navbar navbar-expand-md" style="justify-content: flex-end">
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary"><a href="index.html">Home</a></button>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary"><a href="carrito.html">Carrito</a></button>
+                            </li>
+                            <li class="nav-item" id="btnLogin">
+                                
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary"><a href="contacto.html">Contacto</a></button>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--Termina el Header-->
+    <section class="pt-5 pb-5" id="pagProd">
+        <div class="container">
+            <div class="row">
+                <!-- Titulo y Botones -->
+                <div class="col-6">
+                    <h3 class="mb-3" style="color: white;">Zapatos de Tango</h3>
+                </div>
+                <div class="col-12 text-right">
+                    <a class="btn btn-primary  mb-3 mr-1" href="#carouselExampleIndicators2" role="button"
+                        data-slide="prev">
+                        <i>Atras</i>
+                    </a>
+                    <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                        <i>Siguiente</i>
+                    </a>
+                        <select class="mb-7">
+                            <option selected >Todo</option>
+                            <option >Mujer</option>
+                            <option>Hombre</option>
+                        </select>
+                </div>
+                <!-- Titulo y Botones -->
+                <!--Carrusel-->
+                <div class="col-12">
+                    <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" id="productos">
+
+                            <!--Cards-->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
