@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/sass_estilo.css">
     <link rel="stylesheet" href="css/nicepage.css">
     <link rel="stylesheet" href="css/Casa.css">
-    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='css/bootstrap.min.css' >
     <link rel="stylesheet" href="css/style.css">
     <!--JS-->
     <script src='JS/bootstrap.min.js' defer></script>
@@ -72,11 +72,16 @@
                     <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
                         <i>Siguiente</i>
                     </a>
-                        <select class="mb-7">
-                            <option selected >Todo</option>
-                            <option >Mujer</option>
-                            <option>Hombre</option>
-                        </select>
+                    <div class="col-1" style="padding-left: 1150px;">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="filtro (event,'Hombre')">
+                                <label class="form-check-label" for="flexSwitchCheckDefault" style="border: solid #5B6DCD 1px; color:white;">Hombre</label>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onclick="filtro (event,'Mujer')">
+                                <label class="form-check-label" for="flexSwitchCheckChecked" style="border: solid #5B6DCD 1px; color:white;">Mujer</label>
+                              </div>
+                            </div>
                 </div>
                 <!-- Titulo y Botones -->
                 <!--Carrusel-->
